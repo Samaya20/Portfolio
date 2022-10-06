@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body[data-aos-duration="3000"] [data-aos] {
+    transition-duration: 3s;
+}
+
+// ------------------------------------------ PreLoader Styles ----------------------------------------- 
+
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: #000;
+    width: 100%;
+    height: 100%;
+
+    .loader {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        img {
+            position: absolute;
+            top: 40%;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+
+
+// ------------------------------------------- Header Styles --------------------------------------------
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #000;
+    overflow-y: auto;
+    border-right: 1px solid #43d64515;
+
+
+    .profile {
+
+        img {
+            margin: 20px auto;
+            box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0);
+            display: block;
+            width: 180px;
+            transition: all .2s;
+            border: 1px solid #1e701f;
+            padding: 25px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+        }
+
+        h3 {
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+
+            a {
+                text-decoration: none;
+                color: #43d646;
+                cursor: none;
+                font-family: 'Press Start 2P';
+                transition: all .2s;
+
+                &:hover {
+                    color: rgb(184, 184, 184);
+                }
+            }
+
+        }
+
+        .social-links {
+
+            a {
+                font-size: 20px;
+                display: inline-block;
+                text-decoration: none;
+                background: rgb(7, 7, 7);
+                line-height: 1;
+                color: #43d646;
+                padding: 11px 12px;
+                margin-right: 4px;
+                border-radius: 50%;
+                cursor: pointer !important;
+                text-align: center;
+                width: 44px;
+                height: 43px;
+                transition: all .3s;
+
+                &:hover {
+                    box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.219);
+                }
+
+                &:hover i {
+                    transform: rotateY(360deg);
+                    color: white;
+                }
+
+                i {
+                    transition: all .5s;
+                    cursor: pointer !important;
+                }
+
+            }
+        }
+    }
+
+    .nav-menu {
+        padding-top: 30px;
+
+        .active a {
+            color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+
+            li {
+                position: relative;
+                white-space: nowrap;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: #43d646;
+            text-decoration: none;
+            padding: 12px 15px;
+            margin-bottom: 2px;
+            transition: 0.3s;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Press Start 2P';
+            transition: all .5s;
+
+            span {
+                cursor: pointer !important;
+            }
+
+
+            &:hover {
+                color: #fff;
+            }
+
+
+            i {
+                font-size: 25px;
+                padding-right: 11px;
+            }
+        }
+    }
+
+// -------------------------------------------- Mobile Nav ------------------------------------------------
+
+
+    .mobile-nav-toggle {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 9998;
+        border: 0;
+        background: none;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none !important;
+        line-height: 1;
+        cursor: pointer;
+        text-align: right;
+
+        i {
+            color: #fff;
+        }
+    }
+
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active #header {
+    left: 0;
+}
+
+#main {
+    margin-left: 300px;
+}
+
+// --------------------------------------------- Hero Styles ---------------------------------------------
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    z-index: 1;
+
+    &::before {
+        content: "";
+        background: rgba(5, 13, 24, 0.24);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+    }
+
+    .hero-container {
+        position: relative;
+        z-index: 2;
+        max-width: 100%;
+
+        p {
+            font-size: 60px;
+            font-family: 'Press Start 2P';
+            line-height: 100px;
+            color: #36a837;
+            animation-duration: 1.5s;
+            animation-delay: 2s;
+            text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.100);
+        }
+
+        h1 {
+            font-size: 60px;
+            font-family: 'Press Start 2P';
+            line-height: 100px;
+            color: #36a837;
+            animation-duration: 1.5s;
+            animation-delay: 3s;
+            text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.100);
+        }
+
+        #about-btn {
+            width: 340px;
+            padding: 27px 30px;
+            background: transparent;
+            border: 1px solid #36a837;
+            border-radius: 10px;
+            font-size: 25px;
+            font-family: 'Press Start 2P';
+            color: #36a837;
+            animation-duration: 1.5s;
+            animation-delay: 4s;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            transition: all .5s;
+            z-index: 3;
+            text-decoration: none;
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 350px;
+                width: 430px;
+                background: #000;
+                filter: blur(1px);
+                opacity: 0.3;
+                top: -85px;
+                transition: 0.7s;
+                transform: rotate(-20deg) translateX(-445px) translateY(-150px);
+            }
+
+
+            &:hover:before {
+                transform: rotate(-20deg) translate(-15px, 0px);
+            }
+
+            &:hover {
+                border: 1px solid #000;
+                color: #fff;
+
+                .arrow {
+                    border-color: #fff transparent transparent #fff;
+                }
+            }
+
+            #arrowAnim {
+                width: 10px;
+                height: 10px;
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+            }
+
+            .arrow {
+                width: 20px;
+                height: 20px;
+                border: 0.2vw solid;
+                border-color: #36a837 transparent transparent #36a837;
+                transform: rotate(225deg);
+                transition: all .5s;
+
+            }
+
+
+            .arrowSliding {
+                position: absolute;
+                -webkit-animation: slide 4s linear infinite;
+                animation: slide 4s linear infinite;
+            }
+
+            .delay1 {
+                -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+            }
+
+            .delay2 {
+                -webkit-animation-delay: 2s;
+                animation-delay: 2s;
+            }
+
+            .delay3 {
+                -webkit-animation-delay: 3s;
+                animation-delay: 3s;
+            }
+
+            @-webkit-keyframes slide {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                20% {
+                    opacity: 1;
+                    transform: translateY(-12px);
+                }
+
+                80% {
+                    opacity: 1;
+                    transform: translateY(12px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+            }
+
+            @keyframes slide {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                20% {
+                    opacity: 1;
+                    transform: translateY(-12px);
+                }
+
+                80% {
+                    opacity: 1;
+                    transform: translateY(12px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+            }
+
+        }
+    }
+
+
+}
+
+// --------------------------------------------- About Styles --------------------------------------------
+
+#about {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #010306;
+    color: #36a837;
+    font-family: 'Open Sans';
+
+    .container {
+padding-bottom: 50px !important;
+        .row {
+
+            img {
+                opacity: 0.9;
+            }
+        }
+
+        ul {
+
+            li {
+                color: #36a837;
+                list-style: disc #fff;
+                font-size: 19px;
+
+                strong {
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                i {
+                    color: white;
+                }
+            }
+        }
+
+        h3 {
+            color: #fff;
+        }
+
+        .section-title {
+            font-family: 'Press Start 2P';
+        }
+    }
+}
+
+// -------------------------------------------- Section Styles --------------------------------------------
+
+section {
+    padding:50px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background: #f5f8fd;
+}
+
+.section-title {
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #fff;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+// --------------------------------------------- Scrollbar Stles --------------------------------------------
+
+::-webkit-scrollbar {
+    background: #010306;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #010306;
+}
+
+// --------------------------------------------- Skills Stles -----------------------------------------------
+
+.skills {
+
+    background: #010306;
+
+    .progress {
+        height: 85px;
+        display: block;
+        background: none;
+
+
+
+        .skill {
+            padding: 12px 0;
+            margin: 0 0 6px 0;
+            display: block;
+            font-weight: 600;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+
+            .val {
+                float: right;
+                font-style: normal;
+            }
+        }
+
+        span {
+            font-family: 'Press Start 2P' !important;
+        }
+    }
+
+    .progress-bar-wrap {
+        background: #dce8f8;
+    }
+
+    .progress-bar {
+        width: 1px;
+        height: 30px;
+        transition: .9s;
+        background-color: #27a729;
+    }
+
+    .section-title {
+
+        font-family: 'Press Start 2P' !important;
+
+        p {
+            color: #36a837;
+        }
+
+
+    }
+}
+
+// --------------------------------------------- portfolio Styles --------------------------------------------
+
+.portfolio {
+    background: #010306;
+
+    .portfolio-item {
+        margin-bottom: 30px;
+    }
+
+    #portfolio-flters {
+        padding: 0;
+        margin: 0 auto 35px auto;
+        list-style: none;
+        text-align: center;
+        background: #000;
+        border-radius: 50px;
+        padding: 2px 15px;
+
+        li {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 15px 8px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+            color: #272829;
+            margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #27a729;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        li.filter-active {
+            color: #27a729;
+        }
+    }
+
+    .portfolio-wrap {
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+
+
+        &::before {
+            content: "";
+            background: rgba(0, 0, 0, 0.644);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: all ease-in-out 0.3s;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        .portfolio-links {
+            opacity: 1;
+            left: 0;
+            right: 0;
+            bottom: -60px;
+            z-index: 3;
+            position: absolute;
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: #fff;
+                font-size: 28px;
+                text-align: center;
+                background: #27a729;
+                transition: 0.3s;
+                width: 100%;
+
+                &:hover {
+                    background: #27a729;
+                }
+
+                + {
+                    a {
+                        border-left: 1px solid #27a729;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            &::before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+            }
+
+            .portfolio-links {
+                opacity: 1;
+                bottom: 0;
+            }
+        }
+    }
+
+    .section-title {
+        color: #36A837;
+        font-family: 'Press Start 2P' !important;
+    }
+}
+
+// --------------------------------------------- Contact Styles ----------------------------------------------
+
+.contact {
+    padding-bottom: 130px;
+    background: #010306;
+
+    .section-title {
+        p {
+            color: #1e701f;
+            font-family: 'Press Start 2P';
+        }
+    }
+
+    .info {
+        padding: 30px;
+        background: #000;
+        width: 100%;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+
+        i {
+            font-size: 20px;
+            color: #f5f8fd;
+            float: left;
+            width: 44px;
+            height: 44px;
+            background: #27a729;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        h4 {
+            padding: 0 0 0 60px;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        p {
+            padding: 0 0 10px 60px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #1e701f;
+        }
+
+        .email {
+            p {
+                padding-top: 5px;
+            }
+
+            &:hover {
+                i {
+                    background: #27a729;
+                    color: #fff;
+                }
+            }
+        }
+
+        // .social-links {
+        // 	padding-left: 60px;
+        // 	a {
+        // 		font-size: 18px;
+        // 		display: inline-block;
+        // 		background: #333;
+        // 		color: #fff;
+        // 		line-height: 1;
+        // 		padding: 8px 0;
+        // 		border-radius: 50%;
+        // 		text-align: center;
+        // 		width: 36px;
+        // 		height: 36px;
+        // 		transition: 0.3s;
+        // 		margin-right: 10px;
+        // 		&:hover {
+        // 			background: #27a729;
+        // 			color: #fff;
+        // 		}
+        // 	}
+        // }
+        .address {
+            &:hover {
+                i {
+                    background: #27a729;
+                    color: #fff;
+                }
+            }
+        }
+
+        .phone {
+            &:hover {
+                i {
+                    background: #27a729;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .php-email-form {
+        width: 100%;
+        padding: 30px;
+        background: #000;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+
+        .form-group {
+            padding-bottom: 8px;
+
+            label {
+                color: #27a729;
+            }
+        }
+
+        .validate {
+            display: none;
+            color: red;
+            margin: 0 0 15px 0;
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        .error-message {
+            display: none;
+            color: #fff;
+            background: #ed3c0d;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+
+            br {
+                + {
+                    br {
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+
+        .sent-message {
+            display: none;
+            color: #000;
+            background: #27a729;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+        }
+
+        .loading {
+            display: none;
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                margin: 0 10px -6px 0;
+                border: 3px solid #18d26e;
+                border-top-color: #eee;
+                -webkit-animation: animate-loading 1s linear infinite;
+                animation: animate-loading 1s linear infinite;
+            }
+        }
+
+        input {
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 14px;
+            height: 44px;
+            background: rgb(10, 10, 10);
+            border: none;
+        }
+
+        textarea {
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 14px;
+            padding: 10px 12px;
+            background: rgb(10, 10, 10);
+            border: none;
+        }
+
+        button[type="submit"] {
+            background: #1e701f;
+            border: 0;
+            padding: 10px 24px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 4px;
+
+            &:hover {
+                background: #27a729;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    ;
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------- Media -----------------------------------------
+
+@media (max-width:1199px) {
+
+    #header {
+        left: -300px;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
+    #about {
+        height: 145vh;
+
+        img {
+            display: none;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 17px;
+            padding-bottom: 0 !important;
+        }
+
+        ul {
+            padding-top: 0;
+
+            li {
+                font-size: 20px;
+            }
+        }
+    }
+
+    #skills {
+        p {
+            font-size: 17px;
+        }
+    }
+
+    #contact {
+        .section-title {
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    #hero {
+        .hero-container {
+            margin-left: 40px;
+        }
+    }
+}
